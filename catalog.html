@@ -33,7 +33,7 @@
                 <a href="#">Умные часы</a>
               </li>
               <li>
-              <a href="#">Квадрокоптеры</a>
+                <a href="#">Квадрокоптеры</a>
               </li>
             </ul>
           </section>
@@ -42,8 +42,10 @@
           <div class="user-block">
             <a class="user" href="#">Валентин Петухов</a>
             <a class="log-out active" href="#">Выйти</a>
-            <a class="compare" href="#">Сравнить</a>
-            <a class="cart" href="#">Корзина</a>
+            <div class="user-block-right">
+              <a class="compare" href="#">Сравнить</a>
+              <a class="cart" href="#">Корзина</a>
+            </div>
           </div>
           <nav class="services-navigation">
             <ul>
@@ -72,34 +74,61 @@
             <li>
               <a href="#">Каталог товаров</a>
             </li>
-            <li>Моноподы для селфи</li>
+            <li>
+              <a>Моноподы для селфи</a>
+            </li>
           </ul>
         </nav>
       </section>
       <div class="filter">
         <span class="filter-caption">Фильтр:</span>
-        <form action="#" method="post">
-          <label for="price-range">Стоимость</label> <!--я не уверена, можно ли это переписать на css до нужного вида-->
-          от 0 <input type="range" id="price-range" name="price" min="0" max="5000" step="100"> до 5000
+        <form action="#" method="get">
+          <fieldset class="price-range">
+            <legend>Стоимость</legend>
+            <div class="price-slider">
+              <div class="left-marker"></div>
+              <div class="right-marker"></div>
+              <div class="range-line"></div>
+              <input type="text" name="min-price" placeholder="от 0">
+              <input type="text" name="max-price" placeholder="до 5000">
+            </div>
+          </fieldset>
           <fieldset class="colour">
             <legend>Цвет</legend>
-            <input type="checkbox" name="colour-1" id="black" checked>
-            <label for="black">Чёрный</label>
-            <input type="checkbox" name="colour-2" id="white">
-            <label for="white">Белый</label>
-            <input type="checkbox" name="colour-3" id="blue" checked>
-            <label for="blue">Синий</label>
-            <input type="checkbox" name="colour-4" id="red" checked>
-            <label for="red">Красный</label>
-            <input type="checkbox" name="colour-5" id="pink">
-            <label for="pink">Розовый</label>
+            <ul>
+              <li>
+                <input type="checkbox" name="colour-1" id="black" checked>
+                <label for="black">Чёрный</label>
+              </li>
+              <li>
+                <input type="checkbox" name="colour-2" id="white">
+                <label for="white">Белый</label>
+              </li>
+              <li>
+                <input type="checkbox" name="colour-3" id="blue" checked>
+                <label for="blue">Синий</label>
+              </li>
+              <li>
+                <input type="checkbox" name="colour-4" id="red" checked>
+                <label for="red">Красный</label>
+              </li>
+              <li>
+                <input type="checkbox" name="colour-5" id="pink">
+                <label for="pink">Розовый</label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="bluetooth">
             <legend>Bluetooth</legend>
-            <input type="radio" name="bluetooth" value="1" id="yes" checked>
-            <label for="yes">Есть</label>
-            <input type="radio" name="bluetooth" value="2" id="no">
-            <label for="no">Нет</label>
+            <ul>
+              <li>
+                <input type="radio" name="bluetooth" value="1" id="yes" checked>
+                <label for="yes">Есть</label>
+              </li>
+              <li>
+                <input type="radio" name="bluetooth" value="2" id="no">
+                <label for="no">Нет</label>
+              </li>
           </fieldset>
           <input class="btn" type="submit" name="filter-btn" value="Показать">
         </form>
@@ -107,13 +136,13 @@
       <div class="sup-filter">
         <span class="filter-caption">Сортировка:</span>
         <div class="filter-type">
-          <a href="#" class="active"><span>По цене</span></a>
-          <a href="#"><span>По типу</span></a>
-          <a href="#"><span>По популярности</span></a>
+          <a href="#" class="active">По цене</a>
+          <a href="#">По типу</a>
+          <a href="#">По популярности</a>
         </div>
         <div class="filter-btn">
-          <button type="button"></button>
-          <button type="button"></button>
+          <a class="up-btn" href="#"></a>
+          <a class="down-btn" href="#"></a>
         </div>
       </div>
       <div class="products">
@@ -124,8 +153,8 @@
           <a href="#">Любительская селфи-палка</a>
           <span>500 руб.</span>
           <div class="invisible">
-            <button type="button" class="btn">В корзину</button>
-            <button type="button" class="compare">Добавить к сравнению</button>
+            <a class="btn" href="#">В корзину</a>
+            <a class="link" href="#">Добавить к сравнению</a>
           </div>
         </article>
         <article class="product-item">
@@ -135,8 +164,8 @@
           <a href="#">Профессиональная селфи-палка</a>
           <span>1500 руб.</span>
           <div class="invisible">
-            <button type="button" class="btn">В корзину</button>
-            <button type="button" class="compare">Добавить к сравнению</button>
+            <a class="btn" href="#">В корзину</a>
+            <a class="link" href="#">Добавить к сравнению</a>
           </div>
         </article>
         <article class="product-item">
@@ -146,8 +175,8 @@
           <a href="#">Непотопляемая селфи-палка</a>
           <span>2 500 руб.</span>
           <div class="invisible">
-            <button type="button" class="btn">В корзину</button>
-            <button type="button" class="compare">Добавить к сравнению</button>
+            <a class="btn" href="#">В корзину</a>
+            <a class="link" href="#">Добавить к сравнению</a>
           </div>
         </article>
         <article class="product-item">
@@ -157,16 +186,16 @@
           <a href="#">Селфи-палка «Следуй за мной»</a>
           <span>4 900 руб.</span>
           <div class="invisible">
-            <button type="button" class="btn">В корзину</button>
-            <button type="button" class="compare">Добавить к сравнению</button>
+            <a class="btn" href="#">В корзину</a>
+            <a class="link" href="#">Добавить к сравнению</a>
           </div>
+          <div class="product-new"></div>
         </article>
-        <div class="product-new"></div>
       </div>
       <div class="product-nav">
         <div class="gallery-btn">
-          <button class="btn gallery-prev" type="button">Назад</button>
-          <button class="btn gallery-next" type="button">Вперёд</button>
+          <button class="gallery-prev" type="button">Назад</button>
+          <button class="gallery-next" type="button">Вперёд</button>
         </div>
         <div class="pagination">
           <a class="active" href="#">1</a>
