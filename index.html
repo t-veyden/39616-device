@@ -7,7 +7,7 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
+      <div class="main-header-layout container">
         <div class="container-left">
           <a class="header-logo"><img
           src="img/logo-index.png" width="163" height="36"
@@ -15,26 +15,30 @@
           <form action="#" method="get">
             <input type="search" name="look-for" placeholder="Поиск по сайту">
           </form>
-          <section class="header-catalog">
-            <a class="catalog-menu" href="#">Каталог товаров</a>
-            <ul>
+          <section class="header-menu">
+            <ul class="main-menu">
               <li>
-                <a href="#">Виртуальная реальность</a>
-              </li>
-              <li>
-                <a href="#">Моноподы для селфи</a>
-              </li>
-              <li>
-                <a href="#">Экшн-камеры</a>
-              </li>
-              <li>
-                <a href="#">Фитнес браслеты</a>
-              </li>
-              <li>
-                <a href="#">Умные часы</a>
-              </li>
-              <li>
-                <a href="#">Квадрокоптеры</a>
+                <a href="#">Каталог товаров</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="#">Виртуальная реальность</a>
+                  </li>
+                  <li>
+                    <a href="#">Моноподы для селфи</a>
+                  </li>
+                  <li>
+                    <a href="#">Экшн-камеры</a>
+                  </li>
+                  <li>
+                    <a href="#">Фитнес браслеты</a>
+                  </li>
+                  <li>
+                    <a href="#">Умные часы</a>
+                  </li>
+                  <li>
+                    <a href="#">Квадрокоптеры</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </section>
@@ -68,7 +72,7 @@
           src="img/slider-1.png" width="384" height="486"
           alt="Палка для селфи">
           <div class="slider-description">
-            <div class="slider-num"></div>
+            <span class="slider-num">1</span>
             <h2>Делай селфи, как Бен Стиллер!</h2>
             <p>Самая длинная палка для селфи доступна в нашем магазине.
             Восемь (восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
@@ -90,7 +94,7 @@
           src="img/slider-2.png" width="345" height="485"
           alt="Фитнесс-браслет">
           <div class="slider-description">
-            <div class="slider-num"></div>
+            <span class="slider-num">2</span>
             <h2>Худеем правильно!</h2>
             <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не
             пропускать занятия и соблюдать диету.</p>
@@ -106,7 +110,7 @@
           src="img/slider-3.png" width="526" height="334"
           alt="Квадрокоптер">
           <div class="slider-description">
-            <div class="slider-num"></div>
+            <span class="slider-num">3</span>
             <h2>Порхает как бабочка, жалит как пчела!</h2>
             <p>Этот обычный, на первый взгляд, квадрокоптер оснащён мощным лазером,
             замаскированным под стандартную камеру.</p>
@@ -126,7 +130,7 @@
         </div>
       </div>
       <div class="popular">
-        <ul>
+        <ul class="popular-items">
           <li>
             <a href="#">
               <div class="popular-illustration"></div>
@@ -165,59 +169,59 @@
           </li>
         </ul>
       </div>
-        <div class="services-slider">
-          <div class="services-btns">
-            <button type="button" class="slider-btn btn-active">Доставка</button>
-            <button type="button" class="slider-btn">Гарантия</button>
-            <button type="button" class="slider-btn">Кредит</button>
-          </div>
-          <div class="services-slider-items">
-            <section class="delivery">
-              <h2>Доставка</h2>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
-              бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-              <div class="services-illustration"></div>
-            </section>
-            <section class="warranty">
+      <div class="services-slider">
+        <div class="services-btns">
+          <button type="button" class="slider-btn btn-active">Доставка</button>
+          <button type="button" class="slider-btn">Гарантия</button>
+          <button type="button" class="slider-btn">Кредит</button>
+        </div>
+        <div class="services-slider-items">
+          <section class="delivery">
+            <h2>Доставка</h2>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
+            бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            <div class="services-illustration"></div>
+          </section>
+          <section class="warranty">
               <h2>Гарантия</h2>
               <p>Если из-за возгарания купленного у нас товара у вас сгорит дом - не
               переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
               <div class="services-illustration"></div>
             </section>
-            <section class="credit">
+          <section class="credit">
               <h2>Кредит</h2>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для
               вас наиболее выгодные условия кредита. Выгодные для нашего банка,
               разумеется.</p>
               <div class="services-illustration"></div>
             </section>
-          </div>
         </div>
+      </div>
       <div class="partners">
-          <ul>
-            <li>
+          <ul class="partners-logos">
+            <li class="partner-logo">
               <a href="#"><img
               src="img/logo-1.jpg" width="260" height="100"
               alt="DJI company"></a>
             </li>
-            <li>
+            <li class="partner-logo">
               <a href="#"><img
               src="img/logo-2.jpg" width="260" height="100"
               alt="SP Gadgets"></a>
             </li>
-            <li>
+            <li class="partner-logo">
               <a href="#"><img
               src="img/logo-3.jpg" width="260" height="100"
               alt="GoPro"></a>
             </li>
-            <li>
+            <li class="partner-logo">
               <a href="#"><img
               src="img/logo-4.jpg" width="260" height="100"
               alt="Vive"></a>
             </li>
           </ul>
       </div>
-      <div class="index-content">
+      <div class="index-content-layout index-content">
         <div class="index-content-left">
           <h2 class="index-title">О нас</h2>
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть
@@ -244,11 +248,12 @@
         </div>
       </div>
     </main>
-    <footer class="main-footer">
-      <div class="container">
+    <footer class="main-footer container">
+      <div class="main-footer-layout">
         <div class="footer-left">
-          <img src="img/logo-yellow.png" width="163" height="36"
-          alt="Device">
+          <a class="footer-logo"><img
+          src="img/logo-yellow.png" width="163" height="36"
+          alt="Device"></a>
           <p>г. Москва, ул. Строителей, 15</p>
         </div>
         <div class="footer-middle">
