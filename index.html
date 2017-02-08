@@ -67,69 +67,72 @@
     </header>
     <main class="container">
       <div class="slider">
-        <article class="slider-item">
-          <img class="slider-img"
-          src="img/slider-1.png" width="384" height="486"
-          alt="Палка для селфи">
-          <div class="slider-description">
-            <span class="slider-num">1</span>
-            <h2>Делай селфи, как Бен Стиллер!</h2>
-            <p>Самая длинная палка для селфи доступна в нашем магазине.
-            Восемь (восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-            <!--класс ссылкам я всё-таки этот оставила,
-            потому что это <a> семантически, но стилизуется под кнопку-->
-            <a class="btn" href="#">Подробнее</a>
-            <div class="item-features">
-              <b>8,5 м</b>
-              <span>Длина палки</span>
-              <b>5 кг</b>
-              <span>Вес палки</span>
-              <b>Карбон</b>
-              <span>Материал</span>
-            </div>
+        <div class="slider-inner">
+          <div class="slider-slides">
+            <article class="slider-item">
+              <img class="slider-img"
+              src="img/slider-1.png" width="384" height="486"
+              alt="Палка для селфи">
+              <div class="slider-description">
+                <span class="slider-num">1</span>
+                <h2>Делай селфи, как Бен Стиллер!</h2>
+                <p>Самая длинная палка для селфи доступна в нашем магазине.
+                Восемь (восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                <a class="btn" href="#">Подробнее</a>
+                <div class="item-features">
+                  <b>8,5 м</b>
+                  <span>Длина палки</span>
+                  <b>5 кг</b>
+                  <span>Вес палки</span>
+                  <b>Карбон</b>
+                  <span>Материал</span>
+                </div>
+              </div>
+            </article>
+            <article class="slider-item">
+              <img class="slider-img"
+              src="img/slider-2.png" width="345" height="485"
+              alt="Фитнесс-браслет">
+              <div class="slider-description">
+                <span class="slider-num">2</span>
+                <h2>Худеем правильно!</h2>
+                <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не
+                пропускать занятия и соблюдать диету.</p>
+                <a class="btn" href="#">Подробнее</a>
+                <div class="item-features">
+                  <b>48 часов</b>
+                  <span>Без подзарядки</span>
+                </div>
+              </div>
+            </article>
+            <article class="slider-item">
+              <img class="slider-img"
+              src="img/slider-3.png" width="526" height="334"
+              alt="Квадрокоптер">
+              <div class="slider-description">
+                <span class="slider-num">3</span>
+                <h2>Порхает как бабочка, жалит как пчела!</h2>
+                <p>Этот обычный, на первый взгляд, квадрокоптер оснащён мощным лазером,
+                замаскированным под стандартную камеру.</p>
+                <a class="btn" href="#">Подробнее</a>
+                <div class="item-features">
+                  <b>800 м</b>
+                  <span>Дальность полёта</span>
+                  <b>50 м</b>
+                  <span>Радиус поражения</span>
+                </div>
+              </div>
+            </article>
           </div>
-        </article>
-        <article class="slider-item">
-          <img class="slider-img"
-          src="img/slider-2.png" width="345" height="485"
-          alt="Фитнесс-браслет">
-          <div class="slider-description">
-            <span class="slider-num">2</span>
-            <h2>Худеем правильно!</h2>
-            <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не
-            пропускать занятия и соблюдать диету.</p>
-            <a class="btn" href="#">Подробнее</a>
-            <div class="item-features">
-              <b>48 часов</b>
-              <span>Без подзарядки</span>
-            </div>
-          </div>
-        </article>
-        <article class="slider-item">
-          <img class="slider-img"
-          src="img/slider-3.png" width="526" height="334"
-          alt="Квадрокоптер">
-          <div class="slider-description">
-            <span class="slider-num">3</span>
-            <h2>Порхает как бабочка, жалит как пчела!</h2>
-            <p>Этот обычный, на первый взгляд, квадрокоптер оснащён мощным лазером,
-            замаскированным под стандартную камеру.</p>
-            <a class="btn" href="#">Подробнее</a>
-            <div class="item-features">
-              <b>800 м</b>
-              <span>Дальность полёта</span>
-              <b>50 м</b>
-              <span>Радиус поражения</span>
-            </div>
-          </div>
-        </article>
+        </div>
         <div class="slider-bullets">
           <button type="button" class="slider-bullet active"></button>
           <button type="button" class="slider-bullet"></button>
           <button type="button" class="slider-bullet"></button>
         </div>
       </div>
-      <div class="popular">
+
+      <!-- <div class="popular">
         <ul class="popular-items">
           <li>
             <a href="#">
@@ -168,6 +171,35 @@
             </a>
           </li>
         </ul>
+      </div> -->
+      <!--у меня не получилось прижать список к краю контейнера-->
+
+      <div class="popular">
+        <!-- можно оставить так, или лучше обернуть каждый блок в div? -->
+        <a class="popular-item" href="#">
+          <div class="popular-illustration"></div>
+          <p class="title">Виртуальная реальность</p>
+        </a>
+        <a class="popular-item" href="#">
+          <div class="popular-illustration"></div>
+          <p class="title">Моноподы для селфи</p>
+        </a>
+        <a class="popular-item" href="#">
+          <div class="popular-illustration"></div>
+          <p class="title">Экшн-камеры</p>
+        </a>
+        <a class="popular-item" href="#">
+          <div class="popular-illustration"></div>
+          <p class="title">Фитнес браслеты</p>
+        </a>
+        <a class="popular-item" href="#">
+          <div class="popular-illustration"></div>
+          <p class="title">Умные часы</p>
+        </a>
+        <a class="popular-item" href="#">
+          <div class="popular-illustration"></div>
+          <p class="title">Квадрокоптеры</p>
+        </a>
       </div>
       <div class="services-slider">
         <div class="services-btns">
@@ -175,26 +207,28 @@
           <button type="button" class="slider-btn">Гарантия</button>
           <button type="button" class="slider-btn">Кредит</button>
         </div>
-        <div class="services-slider-items">
-          <section class="delivery">
-            <h2>Доставка</h2>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
-            бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            <div class="services-illustration"></div>
-          </section>
-          <section class="warranty">
-              <h2>Гарантия</h2>
-              <p>Если из-за возгарания купленного у нас товара у вас сгорит дом - не
-              переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+        <div class="services-slider-inner">
+          <div class="slider-slides">
+            <section class="services-slider-item">
+              <h2>Доставка</h2>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
+              бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
               <div class="services-illustration"></div>
             </section>
-          <section class="credit">
-              <h2>Кредит</h2>
-              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для
-              вас наиболее выгодные условия кредита. Выгодные для нашего банка,
-              разумеется.</p>
-              <div class="services-illustration"></div>
-            </section>
+            <section class="services-slider-item">
+                <h2>Гарантия</h2>
+                <p>Если из-за возгарания купленного у нас товара у вас сгорит дом - не
+                переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                <div class="services-illustration"></div>
+              </section>
+            <section class="services-slider-item">
+                <h2>Кредит</h2>
+                <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для
+                вас наиболее выгодные условия кредита. Выгодные для нашего банка,
+                разумеется.</p>
+                <div class="services-illustration"></div>
+              </section>
+          </div>
         </div>
       </div>
       <div class="partners">

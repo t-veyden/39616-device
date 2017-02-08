@@ -1,7 +1,14 @@
+html,
+body {
+  min-width: 1200px;
+  /*min-height: 2793px;*/
+  margin: 0;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
-  font-weight: lighter;
+  font-weight: 300;
   line-height: 30px;
   color: #000000;
 }
@@ -10,7 +17,227 @@ h1,
 h2 {
   font-family: "Gilroy ExtraBold", sans-serif;
   font-size: 47px;
+  line-height: 1.5;
   font-weight: bold;
-  line-height: normal;
   color: #000000;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-header-layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*======================index=================================*/
+
+.container-left {
+  width: 560px;
+}
+
+.container-right {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 560px;
+}
+
+.user-block {
+  margin-bottom: 25px;
+}
+
+/*MENU*/
+
+.main-menu {
+  list-style: none;
+}
+
+.main-menu > li {
+  position: relative;
+}
+
+.main-menu .sub-menu {
+  position: absolute;
+  top: 59px;
+  left: -40px;
+  display: none;
+  list-stile: none;
+  width: 1120px;
+  height: 130px;
+  background-color: yellow;
+}
+
+.main-menu > li:hover .sub-menu {
+  display: block;
+}
+
+/*SLIDER-1*/
+
+.slider {
+  width: 1160px;
+  margin-bottom: 114px;
+}
+
+.slider-inner {
+  overflow: hidden;
+}
+
+.slider-slides {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 300%;
+}
+
+.slider-item {
+  display: flex;
+  width: 1160px;
+  justify-content: space-between;
+}
+
+.slider-description {
+  width: 580px;
+}
+
+/*POPULAR-CARDS*/
+
+.popular {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  margin-bottom: 75px;
+}
+
+.popular-item {
+  width: 160px;
+}
+
+.popular-illustration {
+  background-color: yellow;
+  width: 160px;
+  height: 160px;
+}
+
+/*SLIDER-2*/
+
+.services-slider {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  min-height: 390px;
+  margin-bottom: 94px;
+}
+
+.services-slider-inner {
+  width: 800px;
+  overflow: hidden;
+}
+
+/*PARTNERS*/
+/*здесь я оставила список, но сделать получилось только с
+отрицательным маргином. мне так показалось, что он маркеры видит*/
+
+.partners {
+  width: 1160px;
+  height: 100px;
+  margin-bottom: 93px;
+}
+
+.partners-logos {
+ display: flex;
+ list-style: none;
+ margin-left: -40px;
+}
+
+.partner-logo {
+  position: relative;
+  width: 260px;
+  margin-right: 40px;
+}
+
+/*INDEX-LAYOUT*/
+
+.index-content-layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.index-content {
+  width: 1160px;
+  margin-bottom: 78px;
+}
+
+.index-content-left {
+  width: 500px;
+}
+
+.index-content-right {
+  width: 560px;
+}
+
+/*FOOTER*/
+
+.main-footer-layout {
+  display: flex;
+  padding-top: 65px;
+  padding-bottom: 64px;
+}
+
+.footer-left {
+  width: 260px;
+}
+
+.footer-middle {
+  width: 462px;
+  margin-left: auto;
+}
+
+.footer-right {
+  width: 338px;
+}
+
+
+/*========================catalog==============================*/
+.main-layout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1160px;
+}
+
+.page-header {
+  width: 1040px;
+  margin-top: 9px;
+  margin-bottom: 39px;
+}
+
+.filter {
+  width: 328px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 832px;
+}
+
+.product-grouping {
+  width: 832px;
+  height: 70px;
+  margin-bottom: 69px;
+}
+
+.product-item {
+  width: 360px;
+  margin-left: 40px;
+  margin-bottom: 63px;
+}
+
+.product-nav {
+  width: 760px;
+  margin-left: auto;
+  margin-bottom: 73px;
 }
