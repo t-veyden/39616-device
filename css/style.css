@@ -104,13 +104,22 @@ h2 {
 /*POPULAR-CARDS*/
 
 .popular {
-  display: flex;
-  justify-content: space-between;
   width: 1160px;
   margin-bottom: 75px;
 }
 
-.popular-item {
+.popular ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.popular-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular-items li {
   width: 160px;
 }
 
@@ -136,8 +145,6 @@ h2 {
 }
 
 /*PARTNERS*/
-/*здесь я оставила список, но сделать получилось только с
-отрицательным маргином. мне так показалось, что он маркеры видит*/
 
 .partners {
   width: 1160px;
@@ -145,10 +152,14 @@ h2 {
   margin-bottom: 93px;
 }
 
+.partners ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .partners-logos {
  display: flex;
- list-style: none;
- margin-left: -40px;
 }
 
 .partner-logo {
