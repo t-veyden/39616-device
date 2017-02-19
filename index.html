@@ -8,7 +8,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="index-bg">
     <header class="main-header container">
       <div class="main-header-layout">
         <div class="container-left">
@@ -32,7 +32,7 @@
                           <a href="#">Виртуальная реальность</a>
                         </li>
                         <li>
-                          <a href="#">Моноподы для селфи</a>
+                          <a href="catalog.html">Моноподы для селфи</a>
                         </li>
                         <li>
                           <a href="#">Экшн-камеры</a>
@@ -196,7 +196,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="catalog.html">
               <div class="popular-illustration popular-2"></div>
               <p class="title">Моноподы для селфи</p>
             </a>
@@ -340,5 +340,27 @@
         </div>
       </div>
     </footer>
+    <div class="modal-content">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <form class="write-us" action="#" method="post">
+        <div class="name">
+          <label for="name">Ваше имя:</label>
+          <input type="text" name="name" placeholder="Представьтесь, пожалуйста" id="name">
+        </div>
+        <div class="e-mail">
+          <label for="e-mail">Ваш e-mail:</label>
+          <input type="text" name="e-mail" placeholder="Для отправки ответа" id="e-mail">
+        </div>
+        <label for="comment-field">Текст письма:</label>
+        <textarea name="comment" id="comment-field" rows="7" cols="80">В свободной форме</textarea>
+        <div class="modal-submit">
+          <button class="submit-btn" type="submit" title="Отправить">Отправить</button>
+        </div>
+      </form>
+    </div>
+    <div class="modal-content-map">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <div id="yandex-map"></div>
+    </div>
   </body>
 </html>

@@ -27,6 +27,7 @@ h2 {
   font-size: 47px;
   font-weight: 800;
   line-height: 1.2;
+  letter-spacing: 0.7px;
   font-family: "Gilroy", "Arial", sans-serif;
   color: #000000;
 }
@@ -34,6 +35,17 @@ h2 {
 .container {
   width: 1160px;
   margin: 0 auto;
+}
+
+.index-bg::after {
+  content: "";
+  position: absolute;
+  top: 1242px;
+  left: 0;
+  background-color: #e6e6e6;
+  width: 100%;
+  height: 288px;
+  z-index: -100;
 }
 
 /*==========================HEADER====================*/
@@ -47,24 +59,23 @@ h2 {
   text-decoration: none;
 }
 
-/*==yellow block_1===*/
-.main-header::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 40px;
-  left: 0px;
-  z-index: -1000;
-  width: 1160px;
-  height: 300px;
-  background-color: #ffe294;
-}
-
 .main-header-layout {
   display: flex;
   width: 1040px;
   justify-content: space-between;
   margin: 0 auto;
+}
+
+/*==yellow block_1===*/
+.main-header::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  width: 1160px;
+  height: 300px;
+  background-color: #ffe294;
+  z-index: -1000;
 }
 
 /*============LEFT HEADER=============*/
@@ -88,6 +99,7 @@ h2 {
   width: 163px;
   height: 36px;
   background: url("../img/logo-sprite.png") no-repeat -15px -15px;
+  cursor: pointer;
   display: none;
 }
 
@@ -102,8 +114,8 @@ h2 {
 
 /*======search=====*/
 .search {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   width: 260px;
   padding: 5px 0;
   padding-left: 40px;
@@ -111,6 +123,30 @@ h2 {
   border: none;
   background: transparent;
   opacity: 0.3;
+}
+
+.container-left form::before {
+  content: "";
+  position: absolute;
+  top: 91px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  background: transparent url("../img/icon-sprite.png") no-repeat -181px -115px;
+  z-index: 1000;
+}
+
+.find {
+  position: absolute;
+  top: 71px;
+  right: 0;
+  width: 80px;
+  height: 45px;
+  font: inherit;
+  color: #000;
+  border: 2px solid #000;
+  background-color: transparent;
+  display: none;
 }
 
 .search:hover {
@@ -127,19 +163,6 @@ h2 {
   display: block;
 }
 
-.find {
-  position: absolute;
-  top: 71px;
-  right: 0;
-  width: 80px;
-  height: 45px;
-  background-color: transparent;
-  border: 2px solid #000;
-  color: #000;
-  font: inherit;
-  display: none;
-}
-
 .find:hover {
   color: #fff;
   background-color: #000;
@@ -149,19 +172,6 @@ h2 {
 .find:active {
   color: #6a6a6a;
   background-color: #000;
-  outline: none;
-  outline-color: #ffe27f;
-}
-
-.container-left form::before {
-  content: "";
-  position: absolute;
-  top: 91px;
-  left: 4px;
-  width: 16px;
-  height: 16px;
-  background: transparent url("../img/icon-sprite.png") no-repeat -181px -115px;
-  z-index: 1000;
 }
 
 /*===============MENU================*/
@@ -189,11 +199,11 @@ h2 {
 }
 
 .main-menu > li > a {
-  text-decoration: none;
   font-size: 18px;
   letter-spacing: 3.5px;
   color: #000;
   font-family: "Gilroy ExtraBold", sans-serif;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -272,12 +282,12 @@ h2 {
   position: absolute;
   top: 59px;
   left: -60px;
-  display: none;
-  list-stile: none;
   width: 1160px;
-  height: 129px;
-  z-index: 1000;
+  height: 132px;
+  list-stile: none;
   background-color: #ffe280;
+  z-index: 1000;
+  display: none;
 }
 
 .main-menu > li:hover .sub-menu {
@@ -289,22 +299,21 @@ h2 {
 .container-right {
   display: flex;
   flex-direction: column;
-  /*width: 560px;*/
   width: 500px;
   margin-top: 40px;
 }
 
 .user-block {
   display: flex;
-  justify-content:space-between;
-  margin-bottom: 35px;
+  justify-content: space-between;
   padding-top: 44px;
+  margin-bottom: 35px;
 }
 
 .user-block-right {
   display: flex;
-  width: 220px;
   justify-content:space-between;
+  width: 220px;
 }
 
 .user-block a {
@@ -312,10 +321,10 @@ h2 {
 }
 
 .user-block a::after {
+  content: "";
   position: absolute;
   top: 9px;
   left: 1px;
-  content: "";
   width: 13px;
   height: 12px;
 }
@@ -385,11 +394,11 @@ h2 {
 
 .header-navigation a {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 800;
   letter-spacing: 3.5px;
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
-  text-transform: uppercase;
   color: #000;
+  font-family: "Gilroy", "Arial", sans-serif;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -441,15 +450,13 @@ h2 {
   width: 100px;
   height: 7px;
   background-color: #fff;
-  z-index: 100;
+  z-index: 10;
 }
 
 .slider-description h2 {
   margin-top: 46px;
-  /*margin-top: 10px;*/
   margin-bottom: 0;
   padding-left: 16px;
-  letter-spacing: 1px;
 }
 
 .quadrocopter h2 {
@@ -457,20 +464,17 @@ h2 {
 }
 
 .slider-description p {
-  margin-right: 90px;
-  margin-left: 20px;
+  margin: 19px 90px 69px 20px;
   padding-bottom: 70px;
-  margin-bottom: 69px;
-  margin-top: 19px;
 }
 
 .slider-num {
   position: absolute;
-  z-index: 0;
   font-size: 179.2px;
-  font-weight: bold;
-  font-family: "Gilroy ExtraBold", sans-serif;
+  font-weight: 800;
+  font-family: "Gilroy", "Arial", sans-serif;
   color: #fff;
+  z-index: -10;
 }
 
 .num-1 {
@@ -486,7 +490,6 @@ h2 {
 .num-3 {
   top: 28px;
   right: 50px;
-  z-index: -3;
 }
 
 
@@ -497,11 +500,11 @@ h2 {
 }
 
 .slider-bullets {
-  display: flex;
-  justify-content: space-between;
   position: absolute;
   top: 346px;
   right: 80px;
+  display: flex;
+  justify-content: space-between;
   width: 80px;
   height: 10px;
   text-align: center;
@@ -510,13 +513,13 @@ h2 {
 
 .slider-bullets label {
   display: inline-block;
+  vertical-align: top;
   width: 4px;
   height: 4px;
-  background-color: transparent;
   border: 3px solid #000;
-  opacity: 0.3;
-  vertical-align: top;
   border-radius: 50%;
+  opacity: 0.3;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -535,14 +538,14 @@ h2 {
 }
 
 .slider-item {
-  padding-top: 50px;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: space-between;
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
   overflow: hidden;
 }
 
@@ -570,14 +573,15 @@ h2 {
 
 .item-features thead {
   font-size: 36px;
-  font-family: "Gilroy Light", sans-serif;
+  font-weight: 300;
+  font-family: "Gilroy", "Arial", sans-serif;
 }
 
 .item-features tbody {
   font-size: 13px;
   font-height: 20px;
-  font-family: "OpenSans Light", sans-serif;
-  color: #444444;
+  font-family: "OpenSans", "Arial", sans-serif;
+  color: #444;
 }
 
 .item-features td {
@@ -585,10 +589,9 @@ h2 {
   padding-bottom: 9px;
 }
 
-.quadrocopter .item-features td {
+.quadrocopter td {
   padding-right: 45px;
 }
-
 
 /*=====button===================*/
 .btn-place {
@@ -600,14 +603,13 @@ h2 {
   position: absolute;
   top: -110px;
   left: 2px;
-  display: block;
   font-size: 18px;
-  font-weight: bold;
-  font-family: "Gilroy ExtraBold", sans-serif;
-  text-align: center;
-  color: #000;
-  text-transform: uppercase;
+  font-weight: 800;
   letter-spacing: 3.5px;
+  color: #000;
+  font-family: "Gilroy", "Arial", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
   z-index: 0;
@@ -617,21 +619,19 @@ h2 {
   position: absolute;
   top: 20px;
   left: 60px;
-  display: block;
   z-index: 1;
 }
 
 .slider-description .btn::after {
   content: "";
-  display: block;
   position: absolute;
   left: 40px;
   top: 50px;
   width: 220px;
   height: 8px;
-  background-color: #ffc600;
-  margin-left: -20px;
   margin-top: -20px;
+  margin-left: -20px;
+  background-color: #ffc600;
   transition: 0.5s;
   z-index: -1000;
 }
@@ -671,14 +671,13 @@ h2 {
 }
 
 .popular-items a {
-  display: block;
   font-size: 18px;
+  font-weight: 800;
   line-height: 1.2;
-  font-weight: bold;
-  font-family: "Gilroy ExtraBold", sans-serif;
+  letter-spacing: 0.5px;
+  font-family: "Gilroy", "Arial", sans-serif;
   color: #000;
   text-decoration: none;
-  letter-spacing: 0.5px;
 }
 
 .popular-items .title {
@@ -687,16 +686,16 @@ h2 {
 
 .popular-illustration {
   position: relative;
-  background-color: #ffe27f;
   width: 160px;
   height: 160px;
+  background-color: #ffe27f;
 }
 
 .popular-illustration::before {
   content: "";
   position: absolute;
-  top: px;
-  left: px;
+  top: 0;
+  left: 0;
   width: 160px;
   height: 160px;
   background: url("../img/popular-sprite.png") no-repeat;
@@ -754,8 +753,6 @@ h2 {
 .services-item {
   display: flex;
   flex-direction: column;
-  top: 0;
-  right: 0;
   width: 800px;
   margin-left: 402px;
   overflow: hidden;
@@ -804,12 +801,11 @@ h2 {
 }
 
 .services-btns {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   position: absolute;
   top: 55px;
   left: 0;
+  display: flex;
+  flex-direction: column;
   width: 280px;
   height: 169px;
   text-align: center;
@@ -827,16 +823,16 @@ h2 {
 
 .services-btns label {
   position: relative;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: "Gilroy ExtraBold", sans-serif;
-  text-align: center;
+  width: 160px;
   padding-left: 8px;
   margin-bottom: 35px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  text-align: center;
   color: #000;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  width: 160px;
   cursor: pointer;
 }
 
@@ -980,17 +976,16 @@ h2 {
 
 .transport-companies {
   position: relative;
-  font-size: 16px;
-  line-height: 40px;
-  font-weight: bold;
-  font-family: "Gilroy ExtraBold", sans-serif;
-  color: #000;
   padding: 0;
   margin:0;
   margin-top: 66px;
   padding-left: 36px;
-  list-style-type: none;
-  /*list-style-image: ;*/
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: #000;
+  list-style: none;
 }
 
 .transport-companies li::before {
@@ -1000,28 +995,27 @@ h2 {
   width: 3px;
   height: 3px;
   margin-top: 15px;
-  border: 3px solid black;
+  border: 3px solid #000;
   border-radius: 50%;
 }
 
 .index-content .btn {
   position: absolute;
   top: 530px;
-  left: 0px;
+  left: 0;
   width: 260px;
 }
 
 .index-content .btn::after {
   content: "";
-  display: block;
   position: absolute;
   left: 20px;
   top: 31px;
   width: 260px;
   height: 8px;
-  background-color: #ffc600;
   margin-left: -20px;
   margin-top: -20px;
+  background-color: #ffc600;
   transition: .5s;
   z-index: -1000;
 }
@@ -1039,11 +1033,32 @@ h2 {
 
 /*========================CATALOG==============================*/
 /*=============================================================*/
+.catalog-bg::before {
+  content: "";
+  position: absolute;
+  top: 404px;
+  left: 0;
+  z-index: -100;
+  width: 540px;
+  height: 1310px;
+  background-color: #efefef;
+}
+
+.catalog-bg::after {
+  content: "";
+  position: absolute;
+  top: 404px;
+  left: 0;
+  z-index: -1;
+  opacity: 0.08;
+  width: 100%;
+  height: 70px;
+  background-color: #000;
+}
 
 .main-header-var {
   position: relative;
   height: 211px;
-  /*width: 1160px;*/
 }
 
 .main-header-var a {
@@ -1054,13 +1069,12 @@ h2 {
 .main-header-var::before {
   content: "";
   position: absolute;
-  display: block;
   top:  40px;
-  left: 0px;
-  z-index: -1000;
+  left: 0;
   width: 1160px;
   height: 185px;
   background-color: #ffe294;
+  z-index: -1000;
 }
 
 .main-layout {
@@ -1079,7 +1093,6 @@ h2 {
 .page-header h1 {
   margin-left: 58px;
   margin-bottom: 18px;
-  letter-spacing: 0.7px;
 }
 
 /*=======breadcrumbs============*/
@@ -1095,7 +1108,7 @@ h2 {
   padding: 0;
   list-style: none;
   font-size: 14px;
-  font-family: "OpenSans Light", sans-serif;
+  font-family: "OpenSans", "Arial", sans-serif;
 }
 
 .breadcrumbs li {
@@ -1133,8 +1146,6 @@ h2 {
   right: 20px;
 }
 
-
-
 /*=============FILTER===========================*/
 /*================grouping======================*/
 
@@ -1153,11 +1164,10 @@ h2 {
 
 .filter-caption {
   font-size: 16px;
-  font-weight: bold;
-  font-family: "Gilroy ExtraBold", sans-serif;
-  text-transform: uppercase;
+  font-weight: 800;
   letter-spacing: 3.5px;
-/*   background-color: aqua; */
+  font-family: "Gilroy", "Arial", sans-serif;
+  text-transform: uppercase;
 }
 
 .filter .filter-caption {
@@ -1237,22 +1247,24 @@ h2 {
 /*=======price-range============*/
 .filter legend {
   font-size: 18px;
-  font-weight: bold;
-  font-family: "Gilroy ExtraBold", sans-serif;
+  font-weight: 800;
+  font-family: "Gilroy", "Arial", sans-serif;
+}
+
+.filter label {
+  cursor: pointer;
 }
 
 .range-filter {
   position: relative;
   width: 200px;
   height: 93px;
+  padding: 0;
+  padding-top: 45px;
+  margin: 70px 0 12px 60px;
   border: none;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
-  padding: 0;
-  padding-top: 45px;
-  margin-top: 70px;
-  margin-left: 60px;
-  margin-bottom: 12px;
 }
 
 .range-filter legend {
@@ -1265,7 +1277,6 @@ h2 {
   position: relative;
   height: 30px;
   padding-top: 24px;
-  margin-bottom: px;
 }
 
 .range-controls .scale {
@@ -1282,19 +1293,19 @@ h2 {
 .range-controls .toggle {
   position: absolute;
   top: 17px;
-  left: 0px;
+  left: 0;
   width: 12px;
   height: 12px;
-  cursor: pointer;
   border: 2px solid #000;
   border-radius: 50%;
   background-color: #efefef;
+  cursor: pointer;
 }
 
 .toggle:active {
   border: 2px solid #fff;
   background-color: #62b005;
-  box-shadow: ;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .range-controls .toggle-min {
@@ -1312,7 +1323,8 @@ h2 {
 
 .price-controls label {
   font-size: 14px;
-  font-family: "Gilroy Light", sans-serif;
+  font-weight: 300;
+  font-family: "Gilroy", "Arial", sans-serif;
   color: #000;
   opacity: 0.2;
 }
@@ -1329,16 +1341,15 @@ h2 {
 /*=======colour-filter====================*/
 .colour-filter {
   position: relative;
-  font-size: 14px;
-  font-family: "OpenSans Light", sans-serif;
-  font-weight: 40px;
   width: 200px;
   height: 241px;
+  padding: 0;
+  padding-top: 30px;
+  margin-left: 60px;
+  font-size: 14px;
+  font-family: "Open Sans", "Arial", sans-serif;
   border: none;
   border-bottom: 2px solid #000;
-  padding: 0;
-  margin-left: 60px;
-  padding-top: 30px;
 }
 
 .colour-filter legend {
@@ -1361,14 +1372,14 @@ h2 {
 
 .colour-filter label::before {
   content: "";
-  width: 23px;
-  height: 23px;
   position: absolute;
   top: 8px;
   left: -2px;
-  cursor: pointer;
-  background-color: #dcdcdc;
+  width: 23px;
+  height: 23px;
   margin-top: -3px;
+  background-color: #dcdcdc;
+  cursor: pointer;
 }
 
 .colour-filter label::after {
@@ -1407,11 +1418,11 @@ h2 {
   position: relative;
   width: 200px;
   height: 170px;
-  border: none;
   padding: 0;
+  padding-top: 10px;
   margin-left: 60px;
   margin-bottom: -16px;
-  padding-top: 10px;
+  border: none;
 }
 
 .bluetooth-filter legend {
@@ -1424,7 +1435,6 @@ h2 {
   list-style: none;
   padding: 0;
   margin-top: 46px;
-  /*margin: 0;*/
 }
 
 .bluetooth-filter li {
@@ -1438,11 +1448,11 @@ h2 {
   position: absolute;
   top: 0;
   left: -1px;
+  width: 19px;
+  height: 19px;
   margin-top: 5px;
   border: 2px solid #c7c7c7;
   border-radius: 50%;
-  width: 19px;
-  height: 19px;
   background-color: #eeeeee;
 }
 
@@ -1451,10 +1461,10 @@ h2 {
   position: absolute;
   top: 12px;
   left: 6px;
-  border: 2px solid #000;
-  border-radius: 50%;
   width: 5px;
   height: 5px;
+  border: 2px solid #000;
+  border-radius: 50%;
   background-color: transparent;
   display: none;
 }
@@ -1488,26 +1498,27 @@ h2 {
   left: 78px;
   width: 200px;
   height: 8px;
-  background-color: #ffc600;
   margin-left: -20px;
   margin-top: -20px;
+  background-color: #ffc600;
   transition: 0.5s;
 }
 
 .filter-submit {
   position: relative;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 3.5px;
-  font-family: "Gilroy ExtraBold", sans-serif;
-  color: #000;
-  background-color: transparent;
   width: 200px;
   height: 40px;
   padding: 5px 0;
   margin-left: 58px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 3.5px;
+  color: #000;
+  font-family: "Gilroy", "Arial", sans-serif;
+  text-transform: uppercase;
+  background-color: transparent;
   border: none;
+  cursor: pointer;
   z-index: 100;
 }
 
@@ -1545,17 +1556,16 @@ h2 {
 .product-item a {
   display: flex;
   flex-direction: column;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.2;
-  letter-spacing: 0.3px;
-  padding-top: 36px;
-  vertical-align: text-bottom;
-  padding-bottom: 8px;
-  font-family: "Gilroy ExtraBold", sans-serif;
-  color: #000;
   width: 260px;
   height: 50px;
+  padding-top: 36px;
+  padding-bottom: 8px;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: #000;
   text-decoration: none;
 }
 
@@ -1567,7 +1577,7 @@ h2 {
   text-align: right;
   font-size: 16px;
   font-weight: 300;
-  font-family: "Gilroy Light", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
 }
 
 .product-new::after {
@@ -1576,11 +1586,11 @@ h2 {
   top: 45px;
   right: 40px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 800;
   color: #000;
+  font-family: "Gilroy", "Arial", sans-serif;
   opacity: 0.2;
   text-transform: uppercase;
-  font-family: "Gilroy ExtraBold", sans-serif;
 }
 
 .product-new::before {
@@ -1607,15 +1617,15 @@ h2 {
 
 .invisible a.link {
   position: absolute;
-  bottom: 104px;
-  left: 110px;
+  bottom: 105px;
+  left: 106px;
   width: 160px;
-  font-size: 12px;
+  padding: 0;
+  font-size: 13px;
   font-weight: 300;
   letter-spacing: 0.7px;
-  font-family: "OpenSans Light", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   color: #000;
-  padding: 0;
   opacity: 0.5;
 }
 
@@ -1637,16 +1647,15 @@ h2 {
 
 .invisible a.btn::after {
   content: "";
-  display: block;
   position: absolute;
   left: 50px;
   top: 26px;
   width: 200px;
   height: 8px;
-  background-color: #ffc600;
   margin-left: -20px;
   margin-top: -20px;
   transition: .5s;
+  background-color: #ffc600;
   z-index: -1000;
 }
 
@@ -1671,9 +1680,7 @@ h2 {
   align-items: center;
   width: 760px;
   height: 70px;
-  margin-left: auto;
-  margin-top: -12px;
-  margin-bottom: 73px;
+  margin: -12px 0 73px auto;
   background-color: #ebebeb;
 }
 
@@ -1688,10 +1695,11 @@ h2 {
 .pagination a,
 .pagination button {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 800;
   letter-spacing: 3.5px;
-  font-family: "Gilroy ExtraBold", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   color: #000;
+  cursor: pointer;
 }
 
 .pagination a {
@@ -1733,7 +1741,6 @@ h2 {
 }
 
 .pagination button:active {
-  /*opacity: 0.3;*/
   color: #acacac;
   background-color: #dadada;
 }
@@ -1743,8 +1750,8 @@ h2 {
 
 .main-footer {
   position: relative;
-  color: #ffffff;
-  background-color: #444444;
+  color: #fff;
+  background-color: #444;
 }
 
 .main-footer-layout {
@@ -1762,7 +1769,12 @@ h2 {
   width: 163px;
   height: 36px;
   background: url("../img/logo-sprite.png") no-repeat -15px -147px;
+  cursor: pointer;
   display: none;
+}
+
+.footer-logo:active img {
+  opacity: 0;
 }
 
 .footer-logo:hover::before {
@@ -1772,10 +1784,6 @@ h2 {
 .footer-logo:active::before {
   display: block;
   opacity: 0.3;
-}
-
-.footer-logo:active img {
-  opacity: 0;
 }
 
 .footer-left {
@@ -1792,7 +1800,6 @@ h2 {
   position: absolute;
   top: 172px;
   left: 0;
-  display: block;
   width: 80px;
   height: 7px;
   background-color: #ffe27f;
@@ -1817,11 +1824,11 @@ h2 {
 
 .services-navigation a {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 800;
   letter-spacing: 3.5px;
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: #fff;
   text-transform: uppercase;
-  color: #ffffff;
   text-decoration: none;
 }
 
@@ -1845,8 +1852,8 @@ h2 {
   margin-right: 15px;
   font-size: 0;
   text-decoration: none;
-  opacity: 0.3;
   background: transparent url("../img/icon-sprite.png") no-repeat;
+  opacity: 0.3;
 }
 
 .social-btn:hover {
@@ -1877,11 +1884,10 @@ h2 {
 }
 
 .footer-right a {
-  font-size: 15;
   line-height: 36px;
-  font-weight: lighter;
-  font-family: "Open Sans", sans-serif;
-  color: #ffffff;
+  font-weight: 300;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -1892,13 +1898,12 @@ h2 {
 
 .footer-right .user-block {
   display: flex;
-  /*width: 338px;*/
   width: 327px;
   margin: 0;
   padding: 0;
   margin-top: -5px;
-  padding-left: 12px;
   margin-bottom: 33px;
+  padding-left: 12px;
 }
 
 .footer-right .user-block a::after {
@@ -1964,12 +1969,12 @@ h2 {
 
 .copyright {
   display: inline-block;
+  align-self: flex-end;
   font-size: 0;
   width: 29px;
   height: 37px;
   text-decoration: none;
   background: transparent url("../img/icon-sprite.png") no-repeat -69px -120px;
-  align-self: flex-end;
 }
 
 .copyright:hover {
@@ -1981,44 +1986,165 @@ h2 {
   opacity: 0.3;
 }
 
-
-/*====Серые плашки. Так очевидно не должно быть, но я не знаю, как их сделать
-в ширину экрана======*/
-
-/*slider-2*/
-.services-slider::after {
+/*=====POP-UPS============*/
+.modal-content {
   position: absolute;
-  top: 70px;
-  left: -220px;
-  display: block;
+  top: 1057px;
+  left: 50%;
+  width: 760px;
+  padding: 90px 100px;
+  padding-bottom: 79px;
+  margin-left: -480px;
+  color: #000;
+  background-color: #fff;
+  box-shadow: 0 10px 60px -10px rgba(0, 0, 0, 0.6);
+  /*display: none;*/
+}
+
+.name,
+.e-mail {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  margin-bottom: 31px;
+}
+
+.write-us textarea {
+  width: 760px;
+  margin-bottom: 40px;
+ }
+
+.modal-content-map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 960px;
+  height: 559px;
+  margin-top: -280px;
+  margin-left: -480px;
+  background: #e9e5dc url("../img/map-big.jpg");
+  box-shadow: 0 10px 60px -10px rgba(0, 0, 0, 0.6);
+  z-index: 20;
+  display: none;
+}
+
+.modal-content-close {
+  position: absolute;
+  top: 22px;
+  right: 21px;
+  width: 55px;
+  height: 55px;
+  font-size: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #ffc600;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.modal-content-close:hover {
+  opacity: 1;
+}
+
+.modal-content-close::before {
   content: "";
+  position: absolute;
+  top: 17px;
+  right: 16px;
+  width: 23px;
+  height: 22px;
+  background: url("../img/icon-sprite.png") no-repeat -186px -10px;
+}
+
+.modal-content-close:active::before {
+  opacity: 0.5;
+}
+
+.write-us {
+  display: flex;
+  width: 760px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.write-us label {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "Gilroy", "Arial", sans-serif;
+  margin-bottom: 3px;
+}
+
+.write-us input[type="text"],
+.write-us textarea {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: #444;
+  padding: 16px 20px;
+  border: none;
   background-color: #e6e6e6;
-  width: inherit;
-  width: 1590px;
-  height: 288px;
-  z-index: -100;
+  opacity: 0.5;
 }
 
-/*catalog*/
-.bg::before {
-  content: "";
-  position: absolute;
-  top: 404px;
-  left: 0;
-  z-index: -100;
-  width: 540px;
-  height: 1310px;
-  background-color: #efefef;
+.write-us input[type="text"]:hover,
+.write-us textarea:hover {
+  opacity: 0.8;
 }
 
-.bg::after {
+.write-us input[type="text"]:focus,
+.write-us textarea:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 3px #e6e6e6;
+  background-color: #fff;
+  opacity: 1;
+}
+
+.write-us input[type="text"]:invalid {
+  background-color: #ffb6b6;
+  opacity: 0.5;
+}
+
+/*BUTTON*/
+.modal-submit {
+  position: relative;
+}
+
+.modal-submit::before {
   content: "";
   position: absolute;
-  top: 404px;
-  left: 0;
-  z-index: -1;
-  opacity: 0.08;
-  width: 1583px;
-  height: 70px;
-  background-color: #000;
-}
+  top: 36px;
+  left: 20px;
+  width: 200px;
+  height: 8px;
+  margin-left: -20px;
+  margin-top: -20px;
+  background-color: #ffc600;
+  transition: 0.5s;
+ }
+
+.submit-btn {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: #000;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+ }
+
+ .modal-submit:hover::before {
+  width: 200px;
+  height: 40px;
+  margin-top: -35px;
+ }
+
+ .submit-btn:active {
+  opacity: 0.3;
+ }
