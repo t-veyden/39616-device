@@ -6,7 +6,7 @@ var form = popup.querySelector(".write-us");
 var user = popup.querySelector("[name=user]");
 var address = popup.querySelector("[name=address]");
 var storage = localStorage.getItem("user");
-var field = popup.querySelectorAll(".red");
+var field = popup.querySelector(".red");
 
 link.addEventListener("click", function(event) {
   event.preventDefault();
