@@ -1033,7 +1033,6 @@ h2 {
 
 /*========================CATALOG==============================*/
 /*=============================================================*/
-
 .bg::before {
   content: "";
   position: absolute;
@@ -2034,6 +2033,10 @@ h2 {
   box-shadow: 0 10px 60px -10px rgba(0, 0, 0, 0.6);
   z-index: 20;
   display: none;
+}
+
+iframe {
+  border: none;
 }
 
 .modal-content-show {
