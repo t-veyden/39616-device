@@ -1987,9 +1987,16 @@ h2 {
 }
 
 /*=====POP-UPS============*/
+
+@keyframes lift-up {
+    0% { transform: translateY(400px); }
+    /*50% { transform: translateY(-50px); }*/
+    100% { transform: translateY(0px); }
+}
+
 .modal-content {
   position: absolute;
-  top: 1057px;
+  top: 1750px;
   left: 50%;
   width: 760px;
   padding: 90px 100px;
@@ -1998,11 +2005,11 @@ h2 {
   color: #000;
   background-color: #fff;
   box-shadow: 0 10px 60px -10px rgba(0, 0, 0, 0.6);
-  /*display: none;*/
+  display: none;
 }
 
 .name,
-.e-mail {
+.email {
   display: flex;
   flex-direction: column;
   width: 360px;
@@ -2026,6 +2033,16 @@ h2 {
   box-shadow: 0 10px 60px -10px rgba(0, 0, 0, 0.6);
   z-index: 20;
   display: none;
+}
+
+.modal-content-show {
+  display: block;
+  animation: lift-up 0.6s;
+}
+
+.invalid {
+  background-color: #ffb6b6;
+  opacity: 0.5;
 }
 
 .modal-content-close {
@@ -2100,10 +2117,10 @@ h2 {
   opacity: 1;
 }
 
-.write-us input[type="text"]:invalid {
+/*.write-us input[type="text"]:invalid {
   background-color: #ffb6b6;
   opacity: 0.5;
-}
+}*/
 
 /*BUTTON*/
 .modal-submit {
