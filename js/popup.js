@@ -40,10 +40,6 @@ form.addEventListener("submit", function(event) {
     }
   });
 
-
-
-
-
 /MAP/
 var mapOpen = document.querySelector(".js-open-map");
 
